@@ -1,0 +1,79 @@
+/* ==========================================================================
+   YOR Estate & Property Management - Design Tokens
+   ========================================================================== */
+
+:root {
+  /* Canvas & Surface Colors */
+  --canvas: #F4F4F1;
+  --canvas-subtle: #EBEBE7;
+  --card: #FFFFFF;
+  --card-2: #F7F7F5;
+  --card-hover: #FCFCFA;
+  
+  /* Borders & Dividers */
+  --line: #E2E2DC;
+  --line-2: #D0D0C8;
+  --line-focus: #2E4A7A;
+  
+  /* Typography & Ink Colors */
+  --ink: #14171A;
+  --ink-2: #5B6068;
+  --ink-3: #9297A0;
+  --ink-inverse: #FFFFFF;
+  
+  /* Brand Accent Colors */
+  --accent: #23406D;
+  --accent-hover: #193054;
+  --accent-soft: #E8EEF7;
+  --accent-border: #C8D7EE;
+  
+  --gold: #BF973E;
+  --gold-hover: #A8812F;
+  --gold-soft: #F8F2E2;
+  --gold-border: #EADBBA;
+  --gold-text: #7A5B18;
+  
+  --green: #1F734C;
+  --green-soft: #E2F2E9;
+  --green-border: #BCE2CD;
+  
+  --amber: #9A6609;
+  --amber-soft: #F8EED8;
+  --amber-border: #EED7A8;
+  
+  --red: #A3322C;
+  --red-soft: #F9E4E2;
+  --red-border: #F0BCB8;
+  
+  --blue-soft: #E5F0FA;
+  --blue-text: #1B5E91;
+
+  /* Typography */
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Inter', -apple-system, system-ui, monospace;
+  
+  /* Border Radiuses */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r: 16px;
+  --r-lg: 22px;
+  --r-xl: 28px;
+  --r-full: 9999px;
+  
+  /* Elevated Shadows */
+  --shadow-sm: 0 1px 3px rgba(20, 23, 26, 0.04), 0 2px 8px rgba(20, 23, 26, 0.02);
+  --shadow: 0 1px 3px rgba(20, 23, 26, 0.03), 0 10px 28px rgba(20, 23, 26, 0.05);
+  --shadow-lg: 0 16px 48px rgba(20, 23, 26, 0.09), 0 4px 14px rgba(20, 23, 26, 0.04);
+  --shadow-modal: 0 24px 70px rgba(15, 18, 22, 0.22);
+  
+  /* Micro-transitions */
+  --t-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  --t-normal: 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  --t-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  /* Z-Index Layers */
+  --z-sticky: 100;
+  --z-dropdown: 200;
+  --z-modal: 500;
+  --z-toast: 1000;
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOR Estate — Real Estate Management Platform</title>
+
+  <!-- Modern Typography: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Modular Design System Styles -->
+  <link rel="stylesheet" href="css/tokens.css?v=9.1">
+  <link rel="stylesheet" href="css/base.css?v=9.1">
+  <link rel="stylesheet" href="css/layout.css?v=9.1">
+  <link rel="stylesheet" href="css/components.css?v=9.1">
+  <link rel="stylesheet" href="css/responsive.css?v=9.1">
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       LOGIN VIEW (Authentication Portal)
+       ========================================================================= -->
+  <section id="loginView" class="login-shell">
+    <div class="login-card">
+      <!-- Left Visual Panel -->
+      <div class="login-visual">
+        <div class="login-brand">
+          <img src="assets/images/logo.png" alt="YOR Estate">
+        </div>
+
+        <div class="login-copy">
+          <div class="eyebrow">YOR Estate Management Platform</div>
+          <h1>Property.<br>Compliance.<br><em>Performance.</em></h1>
+          <p>One unified luxury control centre for property records, multi-state legal workflows, group investments,
+            sales CRM, commissions and multi-outlet operations.</p>
+        </div>
+
+        <div class="login-points">
+          <div class="login-point">
+            <b>Role-Based Access</b>
+            <span>Super Admin to external scoped portals</span>
+          </div>
+          <div class="login-point">
+            <b>Multi-State Compliance</b>
+            <span>7+ Indian state checklists & audit logs</span>
+          </div>
+          <div class="login-point">
+            <b>Group Investments</b>
+            <span>Multi-investor mapping & lock periods</span>
+          </div>
+          <div class="login-point">
+            <b>Cross-Outlet Oversight</b>
+            <span>Centralized branch ledger & analytics</span>
+          </div>
+        </div>
+
+        <div class="login-foot">
+          YOR Estate and Property Management Pvt. Ltd. · Secure Role Control
+        </div>
+      </div>
+
+      <!-- Right Sign-In Form -->
+      <div class="login-form">
+        <img class="mini-logo" src="assets/images/logo.png" alt="YOR Estate">
+        <div class="eyebrow">Enterprise Access</div>
+        <h2>Welcome back</h2>
+        <p>Sign in to continue to the YOR Estate management workspace.</p>
+
+        <form id="loginForm">
+          <div class="field">
+            <label>Email Address</label>
+            <div class="input-wrap">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 6h16v12H4z" />
+                <path d="M4 7l8 6 8-6" />
+              </svg>
+              <input type="email" id="loginEmailInput" value="admin@yorestate.com" placeholder="name@yorestate.com"
+                required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Password</label>
+            <div class="input-wrap">
+              <svg viewBox="0 0 24 24">
+                <rect x="5" y="10" width="14" height="10" rx="2" />
+                <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+              </svg>
+              <input type="password" value="superadmin" placeholder="••••••••" required>
+            </div>
+          </div>
+
+          <div class="login-meta">
+            <label class="check">
+              <input type="checkbox" checked>
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="text-link"
+              onclick="window.modals.showToast('Password reset link sent to registered email!')">Forgot password?</a>
+          </div>
+
+          <button id="loginBtn" type="submit" class="primary-btn">
+            Sign In to Dashboard
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2.2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+        </form>
+
+        <div class="login-note">
+          <b>Role Previews Available:</b> Try logging in with <code>admin@yorestate.com</code>,
+          <code>investor@yorestate.com</code>, or <code>agent@yorestate.com</code>, or use the live Role Switcher inside
+          the dashboard!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MAIN APPLICATION VIEW (Header, Nav Tabs, Dynamic Page Container)
+       ========================================================================= -->
+  <section id="appView" class="app hidden">
+    <div class="page">
+      <!-- Sticky Top Header -->
+      <header class="top">
+        <a class="logo" href="#dashboard" title="YOR Estate">
+          <img src="assets/images/logo.png" alt="YOR Estate">
+        </a>
+
+        <!-- Main Navigation Tabs -->
+        <nav class="tabs" id="navTabs" aria-label="Main Navigation">
+          <button class="on" data-route="dashboard">Overview</button>
+          <button data-route="properties">Properties</button>
+          <button data-route="agents">Agents</button>
+          <button data-route="sales">Sales CRM</button>
+          <button data-route="rentals">Rentals</button>
+          <button data-route="investments">Investments</button>
+          <button data-route="commissions">Commissions</button>
+          <button data-route="legal">Legal</button>
+          <button data-route="finance">Finance</button>
+          <button data-route="reports">Reports</button>
+          <button data-route="outlets">Outlets</button>
+          <button data-route="settings">Settings</button>
+        </nav>
+
+        <!-- Search & Notification Action Icons -->
+        <div class="icons">
+          <button class="ib" title="Quick Survey & Property Search (Cmd+K)" onclick="window.modals.openQuickSearch()">
+            <svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </button>
+          <button class="ib dot" title="Notifications"
+            onclick="window.modals.showToast('Notification: Encumbrance Certificate v1.1 requires HO review!')">
+            <svg viewBox="0 0 24 24">
+              <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+              <path d="M13.7 21a2 2 0 0 1-3.4 0" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Live Role Switcher & User Profile Menu -->
+        <div class="user-menu-container">
+          <div class="user" id="userMenuBtn" title="Click to Switch Role">
+            <div class="avatar" id="userAvatar">SA</div>
+            <span class="user-role-label" id="userRoleText">Super Admin</span>
+            <svg class="caret" viewBox="0 0 24 24">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </div>
+          <!-- Role Switcher Dropdown -->
+          <div class="user-dropdown" id="userDropdown"></div>
+        </div>
+      </header>
+
+      <!-- Dynamic Page View Container -->
+      <main id="pageContent" role="main"></main>
+
+      <!-- Footer Note -->
+      <footer class="footer-note">
+        <span>Powered by <b>Awdar Software Solutions</b></span>
+        <span>© 2026 YOR Estate and Property Management Pvt. Ltd. All rights reserved.</span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       JAVASCRIPT MODULES
+       ========================================================================= -->
+  <script src="js/data.js?v=9.1"></script>
+  <script src="js/state.js?v=9.1"></script>
+  <script src="js/auth.js?v=9.1"></script>
+  <script src="js/charts.js?v=9.1"></script>
+  <script src="js/modals.js?v=9.1"></script>
+
+  <!-- 15 Modular Page Controllers -->
+  <script src="pages/dashboard.js?v=9.1"></script>
+  <script src="pages/properties.js?v=9.1"></script>
+  <script src="pages/property_new.js?v=9.1"></script>
+  <script src="pages/agents.js?v=9.1"></script>
+  <script src="pages/legal.js?v=9.1"></script>
+  <script src="pages/commissions.js?v=9.1"></script>
+  <script src="pages/rentals.js?v=9.1"></script>
+  <script src="pages/rental_new.js?v=9.1"></script>
+  <script src="pages/investments.js?v=9.1"></script>
+  <script src="pages/sales.js?v=9.1"></script>
+  <script src="pages/lead_new.js?v=9.1"></script>
+  <script src="pages/finance.js?v=9.1"></script>
+  <script src="pages/reports.js?v=9.1"></script>
+  <script src="pages/outlets.js?v=9.1"></script>
+  <script src="pages/outlet_new.js?v=9.1"></script>
+  <script src="pages/users.js?v=9.1"></script>
+  <script src="pages/user_new.js?v=9.1"></script>
+  <script src="pages/investor.js?v=9.1"></script>
+  <script src="pages/agent.js?v=9.1"></script>
+  <script src="pages/customer.js?v=9.1"></script>
+  <script src="pages/settings.js?v=9.1"></script>
+
+  <!-- Router & Application Bootstrap -->
+  <script src="js/router.js?v=9.1"></script>
+  <script src="js/app.js?v=9.1"></script>
+</body>
+
+</html>
